@@ -4,12 +4,378 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".RegisterActivity">
 
+    <RelativeLayout
+        android:id="@+id/rlIntroduction"
+        android:layout_width="match_parent"
+        android:background="@color/light_grey"
+        android:layout_height="180dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/margin_medium_2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblAlmostThere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_below="@id/btnBack"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="Almost there!"
+            android:fontFamily="@font/chivo_bold"
+            android:textSize="@dimen/text_regular_2x"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblCompleteForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@id/lblAlmostThere"
+            android:text="Complete the form below to create\nyou Ready To Travel account"
+            android:fontFamily="@font/chivo_regular"
+            android:textSize="@dimen/text_regular"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblMandatory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@id/lblCompleteForm"
+            android:text="*Mandatory"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:fontFamily="@font/chivo_regular"
+            android:textSize="@dimen/text_smaller"/>
+
+    </RelativeLayout>
+
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_back"
-        android:layout_margin="@dimen/margin_medium_2"/>
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignBottom="@id/rlIntroduction"
+        android:layout_marginBottom="-65dp"
+        android:src="@mipmap/guitar"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlIntroduction"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/textField"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="@dimen/margin_medium_2"-->
+            <!--            android:layout_marginHorizontal="@dimen/margin_medium_2"-->
+            <!--            android:hint="First Name">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                style="@style/ThemeOverlay.Material3.MaterialTimePicker.Display.TextInputEditText"-->
+            <!--                />-->
+
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <LinearLayout
+                android:id="@+id/llFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name *"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLastName"
+                android:layout_below="@id/llFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name *"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <EditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmailAddress"
+                android:layout_below="@id/llLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address *"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDobAndGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llEmailAddress"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:id="@+id/llDob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country of Resident *"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/chivo_regular"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/edtDob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:inputType="textEmailAddress"
+                            android:text="DD/MM/YYYY"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:background="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@mipmap/dob"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBottom="@id/llDob"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchGender"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textOff="Female"
+                        android:textOn="Male"
+                        android:textSize="15sp"
+                        android:thumb="@drawable/thumb_selector"
+                        app:showText="true"
+                        app:switchTextAppearance="@style/SwitchTextAppearance"
+                        app:thumbTint="@color/white"
+                        app:track="@drawable/track_selector"
+                        app:trackTint="@color/grey" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNationality"
+                android:layout_below="@id/llDobAndGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nationality *"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <EditText
+                    android:id="@+id/edtNationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCountry"
+                android:layout_below="@id/llNationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country of Resident *"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <EditText
+                    android:id="@+id/edtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPhone"
+                android:layout_below="@id/llCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile no (optional)"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/chivo_regular"
+                    />
+                <com.codingtest.travelapp.custom.CustomEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="+65 "
+                    android:inputType="phone"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_medium_2"
+                android:background="@color/light_grey"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_below="@id/llPhone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateAccountNow"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:layout_below="@id/divider"
+                android:background="@drawable/background_gradient"
+                app:backgroundTint="@null"
+                android:text="Create my account now"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:textColor="@color/white"
+                />
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
 
 </RelativeLayout>
