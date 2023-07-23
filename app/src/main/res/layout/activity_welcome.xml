@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".WelcomeActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/welcome" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@mipmap/clouds" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:fontFamily="@font/chivo_bold"
+            android:text="Welcom to\nReady to travel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblWelcomeDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblWelcome"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:fontFamily="@font/chivo_regular"
+            android:text="Signup with Facebook for the most\nfullfilling trip planning experience with us."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginWithFb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_below="@id/lblWelcomeDetail"
+            android:backgroundTint="@color/blue"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:text="Login with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/margin_medium"
+            app:icon="@drawable/ic_facebook"
+            app:iconGravity="end"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginWithEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@id/btnLoginWithFb"
+            android:backgroundTint="@color/blue"
+            android:text="Login with email address"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/margin_medium"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateNewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_below="@id/btnLoginWithEmail"
+            android:background="@drawable/background_gradient"
+            app:backgroundTint="@null"
+            android:text="Create New Account"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:textColor="@color/white"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
