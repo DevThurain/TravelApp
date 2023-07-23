@@ -2,6 +2,9 @@ package com.codingtest.travelapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
 import com.codingtest.travelapp.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
@@ -15,4 +18,7 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(RegisterActivity.getIntent(this))
         }
     }
+
+
 }
+
